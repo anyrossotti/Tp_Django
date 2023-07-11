@@ -3,5 +3,4 @@ from Portfolio.views import PerfilListView
 
 urlpatterns= {
     path('', PerfilListView.as_view()),
-    
 }

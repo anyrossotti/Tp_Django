@@ -75,5 +75,5 @@ def edicion(request, id):
     perfil.domicilio = domicilio
     perfil.save()
     #return redirect('')
-    return render(request, 'nosotreees.html', {"perfil": perfil}) 
+    return render(request, 'index.html', {"perfil": perfil}) 
 

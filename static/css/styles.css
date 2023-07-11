@@ -31,7 +31,6 @@ header {
     height: 14vh;
     width: 100%;
     animation: move 1s ease-out;
-
 }
 
 
@@ -40,7 +39,6 @@ header {
     display: flex;
     margin-right: 40px;
     position: relative;
-
 }
 
 .nav-menu-item {
@@ -92,7 +90,6 @@ header {
 /* BOTON DARK/LIGHT */
 .dark {
     background-color: var(--white);
-
 }
 
 .dark .link::before {
@@ -128,7 +125,6 @@ header {
 .brillo {
     position: relative;
     height: 30px;
-
 }
 
 .dark .brillo,
@@ -150,7 +146,11 @@ header {
 .dark .foot-ppal,
 .dark .tituloContacto,
 .dark ::placeholder,
-.dark label {
+.dark label,
+.dark th,
+.dark td,
+.dark .tableNos,
+.dark .tituloS {
     color: black;
 }
 
@@ -242,23 +242,16 @@ header {
     transition-duration: 1s;
 }
 
-td, th {
+td, th, .tdN {
     color: white;
     width: fit-content;
-    padding: 5px;
-}
-
-.tdN {
-    width: 100px;
-    color: white;
+    max-width: 220px;
     padding: 10px;
 }
 
 td, th {
     border:2px white solid;
-    padding: 5px;
 }
-
 
 .tableNos {
     margin: auto;
@@ -408,8 +401,8 @@ h5 {
 
 /******* CONTACTO *******/
 .sectionContacto {
-    margin-top: 100px;
-    height: 85vh;
+    margin-top: 80px;
+    height: 80vh;
     display: flex;
     justify-content: center;
     animation: movimiento 1s ease-out;
