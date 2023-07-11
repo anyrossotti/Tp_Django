@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}  <!-- para cargar los elementos estaticos,ya sea los css, imagenes, etc-->
+{% block title %}Nosotros{% endblock %}
+
+{% block content %}
+
+  <div class="nosotros" id="nosotros">
+    <div>
+      <h3 class="titulo">NOSOTROS </h3>
+    </div>
+    <br>
+  
+    <table class="tableNos">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">Domicilio</th>
+          <th colspan="2">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in object_list %}
+        <tr>
+          <td>{{p.nombre}}</td>
+          <td>{{p.telefono}}</td>
+          <td>{{p.email}}</td>
+          <td>{{p.domicilio}}</td>
+          <td class="tdN"><a href="/editarPerfil/{{p.id}}">Editar</a></td>
+          <td class="tdN"><a href="/eliminarP/{{p.id}}">Eliminar</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="formulario">
+      <a href="{{'/nuevoP/'}}" id="formButton">Crear Nuevo Perfil</a>
+    </div>
+{% endblock %}

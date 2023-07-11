@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}  <!-- para cargar los elementos estaticos,ya sea los css, imagenes, etc-->
+{% block title %}Editar Perfil{% endblock %}
+{% block content %}
+<section class="sectionContacto" id="contacto">
+  <div class="diseñoContacto"> <!-- -->
+    <div>
+      <p class="titulo">Editar Perfil  ID:{{perfil.id}}</p>
+    </div>
+    <form id="formularioCurso" action="/edicion/{{perfil.id}}" method="POST", "GET">{% csrf_token %}                    
+      <input type="hidden" id="id" name="id" class="form-control" value="{{perfil.id}}" />
+      <div class="formulario">
+        <label for="nombreP">
+          <input type="text" id="nombrePE" name="nombrePE" class="form-control" value="{{perfil.nombre}}" />
+        </label>
+      </div>
+      <div class="formulario">
+        <label for="telefonoP">
+          <input type="number" id="telefonoPE" name="telefonoPE" class="form-control" value="{{perfil.telefono}}"/>
+        </label>
+      </div>
+      <div class="formulario">
+        <label for="emailP">
+          <input type="email" name="emailPE" id="mailformPE" value="{{perfil.email}}" pattern="^[a-zA-Z0-9!#$%&amp;'*+\/=?^_`\{\|\}~.\-]+@[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)*$">
+        </label>
+      </div>
+      <div class="formulario">
+        <label for="domicilioP">
+          <input type="text" name="domicilioPE" id="domicilioPE" value="{{perfil.domicilio}}">
+        </label>
+      </div>
+      <div class="formulario">
+      <input type="submit" value="Guardar Cambios" id="formButton">
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}

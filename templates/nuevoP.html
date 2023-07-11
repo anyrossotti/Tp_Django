@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}  <!-- para cargar los elementos estaticos,ya sea los css, imagenes, etc-->
+{% block title %}Editar Perfil{% endblock %}
+
+{% block content %}
+    
+<section class="sectionContacto" id="contacto">
+  <div class="diseñoContacto"> <!-- -->
+    <div>
+      <p class="titulo">Cargar Nuevo Perfil</p>
+    </div>
+    <form id="formularioCurso" action="/registrarPerfil/" method="POST">{% csrf_token %}                    
+      <div class="formulario">
+        <label for="nombreP">
+          <input type="text" id="nombreP" name="nombreP" class="form-control" placeholder="Nombre" autofocus/>
+        </label>
+      </div>
+      <div class="formulario">
+        <label for="telefonoP">
+          <input type="number" id="telefonoP" name="telefonoP" class="form-control"/>
+        </label>
+      </div>
+      <div class="formulario">
+        <label for="emailP">
+          <input type="email" name="emailP" id="mailform" placeholder="E-mail" pattern="^[a-zA-Z0-9!#$%&amp;'*+\/=?^_`\{\|\}~.\-]+@[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)*$">
+        </label>
+      </div>
+      <div class="formulario">
+        <label for="domicilioP">
+          <input type="text" name="domicilioP" id="domicilioP" placeholder="Domicilio">
+        </label>
+      </div>
+      <div class="formulario">
+      <input type="submit" value="Guardar Perfil" id="formButton">
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}
