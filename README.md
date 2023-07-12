@@ -1,20 +1,13 @@
-# PORTFOLIO
-Es un portfolio para nuestra búsqueda laboral hecho con HTML CSS Y JS. 
+# Tp_Django
+Hicimos la integracion a Django del proyecto realizado previamente como Trabajo Practico en Codo a Codo 2023, comisión 23031, -Full Stack Python-
+1er Proyecto
+https://github.com/vickiflama/trabajopractico
+Realizamos un Portfolio para nuestra búsqueda labora, donde realizamos la integración del Front creado con HTML, CSS y JS y el Back End con Django.
+- En Templates se encuentran las diferentes plantillas de las páginas que conforman nuestro sitio.
+- Se creó el Model -Perfiles-, para poder crear, editar o eliminar un nuevo Perfil, cómo asi también visualizar dicha información (CRUD).
+- Se agregó la interacción con la base de datos en dónde se guarda la información incorporada en el Model Perfiles.
+- Formulario de Contacto (API) que permite dejar mensajes del usuario y datos de contacto. Se puede visualizar la información en:
+https://sheetdb.io/api/v1/bxc0vzg9kvfns
 
-(Realizado por María Inés Bocanera)
-Formulario de contacto, validado y con una API REST (sheet db io). 
 
-(Realizado por Analía Rossotti)
-Animaciones en section "cards": Hover en una de ellas y difuminado en las cards restantes.
-En section "cards": haciendo click en ellas se encuentra nuestra información de contacto.
 
-(Realizado por Victoria Flama)
-Animaciones en section "skills": con js el evento scroll al llegar a 500px top(Y), se haga una animacion de abajo hacia arriba.
-Botón diurno/nocturno, con sus respectivas modificaciones de css.
-Botón hamburguesa (menú) para dispositivos móviles.
-
-(En conjunto)
-Diseñado para 3 dispositivos: computadora, tablet y móviles.
-Temática, diseño, colorimetria.
-
-Jonathan Diaz no participó.
